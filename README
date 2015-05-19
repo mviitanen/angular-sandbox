@@ -1,1 +1,6 @@
-My Hello World Angular app
+Marko's Angular Sandbox
+=======================
+
+This project contains angular examples and prototypes.
+
+Each example is in its own directory under www/app.
