@@ -1,0 +1,11 @@
+<div style="border: 2px solid red;;margin:10px;padding:5px;">
+  <h5>My Outer Directive</h5>
+  Street: <input ng-model="str"/><br/> City: <input ng-model="city"/><br/> State: <input ng-model="state"/><br/>
+
+  <span id="streetLbl" name="streetLbl" ng-bind="str"></span> <span id="cityLbl" name="cityLbl" ng-bind="city"></span>
+  <span id="stateLbl" name="stateLbl" ng-bind="state"></span>
+
+  <my-msg salute="str"></my-msg>
+
+  <p>That's all folks!</p>
+</div>
