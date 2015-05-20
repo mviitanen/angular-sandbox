@@ -22,6 +22,7 @@ angular.module("procludeDisplay", ["ui.router"])
   }).directive(
   "myAddress", function () {
     return {
+      transclude:true,
       restrict: "EAC",
       templateUrl: "app/proclude/address.html",
       scope: {
@@ -35,9 +36,14 @@ angular.module("procludeDisplay", ["ui.router"])
       controller: "ProcludeController",
       controllerAs: "dc",
       restrict: 'E',
-      scope: {
-        salute: '='
-      },
-      templateUrl: "app/proclude/myLine.html"
+      templateUrl: "app/proclude/myLine.html",
+      link: function (scope, element, attrs) {
+        scope.salute = attrs['salute'];
+        scope.salute2 = attrs['salute2'];
+        scope.bg = attrs['bg'];
+        scope.lc = attrs["lc"];
+        console.log("Salute: " + attrs['salute']);
+
+      }
     };
   });

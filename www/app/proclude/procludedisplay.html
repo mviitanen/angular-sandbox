@@ -1,4 +1,9 @@
 <div>
     <h3>Directive</h3>
-    <my-address str-attr="dc.street" city="dc.city" state="dc.state"></my-address>
+    <my-address str-attr="dc.street" city="dc.city" state="dc.state">
+        <div ng-repeat="n in [1,2,3,4,5]">
+        <my-msg salute="Hello {{n}}" salute2="Terve" bg="gray" lc="pink"></my-msg>
+        </div>
+
+    </my-address>
 </div>
